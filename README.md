@@ -11,8 +11,7 @@ Ein Tetris im Neon-Look, das komplett in **einer einzigen HTML-Datei** steckt. K
 ![Screenshot](docs/screenshot.png)
 -->
 
-**Live-Demo:** ### ▶ [Jetzt spielen / Play now](https://21tron.github.io/Tetris/) (nach dem Aktivieren von GitHub Pages, siehe unten)
-
+**Live-Demo:** ### ▶ [Jetzt spielen / Play now](https://21tron.github.io/Tetris/) 
 ---
 
 ## Funktionen
