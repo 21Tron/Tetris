@@ -249,7 +249,7 @@ $('#rl').innerHTML=a.length?a.map((g,i)=>`<li${g.t===last?' class="new"':''}><i>
 $('#b-clear').hidden=$('#rh').hidden=!a.length;rstClear();show('board');$('#rl').scrollTop=0}
 $('#b-rank').onclick=board;$('#b-back').onclick=()=>{rstClear();show('menu')};
 $('#b-clear').onclick=()=>{if(!cf){cf=1;$('#b-clear').textContent=tr('sure');ct=setTimeout(rstClear,3500);return}ls.set(GK,'[]');ls.set(LK,0);G.best=0;hud();board()};
-const SA=matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
+const SA=false;
 async function copyLink(){const u=location.href.split('#')[0],i=$('#lk');i.value=u;try{await navigator.clipboard.writeText(u);return true}catch(e){try{i.focus();i.select();i.setSelectionRange(0,u.length);return document.execCommand('copy')}catch(e2){return false}}}
 function tab(t){$('#s-ios').hidden=t!=='ios';$('#s-and').hidden=t!=='and';$('#t-ios').classList.toggle('on',t==='ios');$('#t-and').classList.toggle('on',t==='and')}
 $('#sh').onclick=async()=>{tab(/android/i.test(navigator.userAgent)?'and':'ios');$('#cp').classList.remove('bad');$('#cp').textContent=tr('copying');show('install');const ok=await copyLink();$('#cp').classList.toggle('bad',!ok);$('#cp').textContent=ok?tr('copied'):tr('cfail')};
